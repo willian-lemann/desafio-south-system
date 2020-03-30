@@ -1,0 +1,81 @@
+.modal-container {
+    width: 100%;
+    max-width: 1120px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container .content {
+    width: 100%;
+    padding: 96px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-container .content section {
+    width: 100%;
+    max-width: 380px;
+}
+
+.modal-container .content section h1 {
+    margin: 64px 0 32px;
+    font-size: 32px;
+}
+
+.modal-container .content section p {
+    font-size: 18px;
+    color: #737380;
+    line-height: 32px;
+}
+
+.modal-container .content section img {
+    width: 100%;
+}
+
+.modal-container .content form {
+    width: 100%;
+    max-width: 450px;
+}
+
+.modal-container .content form button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(to left, #fe6e00, rgb(209, 50, 1));
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 16px;
+    transition: filter 0.2s;
+}
+
+.modal-container .content form input, .modal-container .content form {
+    margin-top: 20px;
+    border: 1px solid;
+    padding: 0 15px;
+}
+
+.modal-container .content form input, .modal-container .content form .button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(to left, #fe6e00, rgb(209, 50, 1));
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 700;
+ 
+}

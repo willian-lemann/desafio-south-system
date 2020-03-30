@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+.dragonlist-container {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.dragonlist-container .content {
+    height: 100vh;
+    width: 1120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dragonlist-container .header-division {
+    border: 1px thin black;
+    width: 100%;
+}
+
+.dragonlist-container .content .dragonlist-content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 1120px;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dragonlist-container .content .dragonlist-content .addNewDragon {
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+.dragonlist-container .content .dragonlist-content ul {
+    margin-top: 10px;
+    list-style: none;
+    padding: 0 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.dragonlist-container .content .dragonlist-content ul li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    border-radius: 8px;
+    background: #f0f0f0;
+    padding-left: 100px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.dragonlist-container .content .dragonlist-content ul :hover {
+    filter: brightness(98%);
+}
+
+.dragonlist-container .content .dragonlist-content ul li .actionButtons {
+    display: flex;
+    width: 400px;
+    height: 80px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.dragonlist-container .content .dragonlist-content ul li .actionButtons .deleteButton {
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 40px;
+    background: #e02041;
+}
+
+.dragonlist-container .content .dragonlist-content ul li div {
+    height: 100%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fe6e00;
+}
+
+.dragonlist-container button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    background: linear-gradient(to left, #fe6e00, rgb(209, 50, 1));
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 16px;
+    width: 60px;
+    height: 40px;
+}
+
+.dragonlist-container .content .dragonlist-content ul li button:hover {
+    filter: brightness(80%);
+}
+
+.dragonlist-container .header-content {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.dragonlist-container .header-content h3 {
+    font-weight: bold;
+    font: 400 38px Roboto, sans-serif;
+}
+
+@media(max-width:1000px) {
+    .dragonlist-container .content .dragonlist-content ul li {
+        justify-content: center;
+        width: 350px;
+    }
+    .dragonlist-container .content .dragonlist-content ul li .actionButtons {
+        justify-content: space-evenly;
+    }
+    .dragonlist-container .content .dragonlist-content ul li div {
+        width: 0;
+    }
+}
