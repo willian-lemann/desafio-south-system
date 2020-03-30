@@ -16,22 +16,36 @@
     margin-right: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background: #f0f0f0;
 }
 
 .profile-container section.section-container strong {
-    margin-bottom: 40px;
+    margin-top: 40px;
     font-size: 18px;
     font-weight: bold;
 }
 
-.profile-container section.section-container strong p {
-    margin-bottom: 10px;
-    color: #41414d;
+.profile-container section.section-container p {
+    color: #fe6e00;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .profile-container .image-container img {
     height: 100px;
+}
+
+.profile-container button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    border: 0;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-top: 16px;
+    transition: filter 0.2s;
 }

@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { parseISO, format } from 'date-fns';
+import { useParams, Link } from 'react-router-dom';
+import { FiArrowLeft } from 'react-icons/fi';
+import { format, parseISO } from 'date-fns';
+import { isEmpty } from 'lodash';
 
 import './styles.css';
 import dragonLogo from '../../../assets/dragon-logo.jpg'
 import LoadSpecificDragon from '../../../services/DragonProfile/LoadDragon';
 
- 
+
 function DragonProfile() {
     let { id } = useParams();
     const [dragon, setDragon] = useState({});
-    const [newDate, setNewDate] = useState('');
 
     useEffect(() => {
         loadSpecificDragon(id)
@@ -20,8 +21,6 @@ function DragonProfile() {
         const specificDragon = await LoadSpecificDragon(id);
         setDragon(specificDragon);
     }
-
-    let teste = format(parseISO(dragon.createdAt), 'dd-mm-yyyy')
 
     return (
         <div className="profile-container">
@@ -36,8 +35,15 @@ function DragonProfile() {
                 <p>{dragon.type}</p>
 
                 <strong>Data de criação:</strong>
-                <p>{teste}</p>
+                <p>{!isEmpty(dragon) &&
+                    format(parseISO(dragon.createdAt), "dd-mm-yyyy")}
+                </p>
             </section>
+            <Link to="/list">
+                <button>
+                    <FiArrowLeft size={28} color="#fe6e00" />
+                </button>
+            </Link>
         </div>
     );
 }

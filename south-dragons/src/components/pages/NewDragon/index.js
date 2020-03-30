@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import './styles.css';
 import dragonLogo from '../../../assets/dragon-logo.jpg';
- 
+
 import CreateNewDragon from '../../../services/NewDragonService/CreateNewDragon';
 
 function NewDragon() {
@@ -17,8 +17,10 @@ function NewDragon() {
 
     const notify = () => toast('Dragão cadastrado com sucesso!', {
         type: 'success',
+        className: 'toastContainer',
         onClose: () => history.push('/list')
     });
+
 
     const handleNewDragon = async (event) => {
         event.preventDefault();
@@ -32,8 +34,6 @@ function NewDragon() {
         if (response.data !== null) {
             notify();
         }
-
-
 
     };
 

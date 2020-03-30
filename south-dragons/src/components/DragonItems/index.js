@@ -9,24 +9,18 @@ function DragonItems({ data, handleDeleteDragon, handleToProfile }) {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-
-  const setModalOpen = () => {
-    setIsModalOpen(true);
-  };
-
-
   return (
     <li key={data.id}>
       <div onClick={() => handleToProfile(data.id)}>
         <span>{data.name}</span>
       </div>
       <section className="actionButtons">
-        <Button onClick={() => setModalOpen()}>
+        <Button onClick={() => setIsModalOpen(true)}>
           <MdEdit />
           <EditDragonModal modalState={isModalOpen} data={data} />
         </Button>
         <Button className="deleteButton" onClick={() => handleDeleteDragon(data.id)}>
-          <MdDelete size={28} />
+          <MdDelete size={22} />
         </Button>
       </section>
     </li>

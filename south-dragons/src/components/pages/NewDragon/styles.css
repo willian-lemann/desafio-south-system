@@ -11,7 +11,7 @@
 
 .newdragon-container .content {
     width: 100%;
-    padding: 96px; 
+    padding: 96px;
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
@@ -34,7 +34,7 @@
     line-height: 32px;
 }
 
-.newdragon-container .content section img{
+.newdragon-container .content section img {
     width: 100%;
 }
 
@@ -43,7 +43,7 @@
     max-width: 450px;
 }
 
-.newdragon-container .content form button{
+.newdragon-container .content form button {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,13 +55,17 @@
     border-radius: 8px;
     color: #fff;
     font-weight: 700;
-    margin-top: 16px;    
-    transition: filter 0.2s; 
+    margin-top: 16px;
+    transition: filter 0.2s;
 }
 
-.newdragon-container .content form input,
-.newdragon-container .content form textarea {
+.newdragon-container .content form input, .newdragon-container .content form textarea {
     margin-top: 20px;
     border: 1px solid;
     padding: 0 15px;
+}
+
+.toastContainer {
+    text-align: center;
+    background: linear-gradient(to left, #fe6e00, rgb(209, 50, 1));
 }

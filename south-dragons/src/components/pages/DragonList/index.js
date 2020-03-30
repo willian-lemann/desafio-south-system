@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { orderBy } from 'lodash';
 
 import './styles.css';
+import dragonLogo from '../../../assets/dragon-logo.jpg';
 
 import DragonItems from '../../DragonItems/index';
 import { Button } from 'react-materialize';
@@ -12,7 +13,6 @@ import DeleteDragon from '../../../services/DragonListService/DeleteDragon';
 
 function DragonList() {
     const history = useHistory();
-    const loggedUser = localStorage.getItem('user');
 
     const [dragons, setDragons] = useState([]);
 
@@ -41,22 +41,24 @@ function DragonList() {
     };
 
 
+    let orderedDragons = orderBy(dragons, [dragon => dragon.name.toLowerCase()], ['asc']);
+
     return (
         <div className="dragonlist-container">
             <div className="content">
                 <header className="header-content">
-                    <h3>DRAGÕES</h3>
+                    <img src={dragonLogo} alt="South Dragons" />
                 </header>
                 <hr className="header-division" />
+                <Button className="addNewDragon" onClick={handleRegister}>
+                    Cadastrar novo dragão
+                </Button>
                 <section className="dragonlist-content">
                     <ul>
-                        {dragons.map(dragon => (
-                            <DragonItems data={dragon} handleDeleteDragon={handleDeleteDragon} handleToProfile={handleToProfile} />
+                        {orderedDragons.map(dragon => (
+                            <DragonItems key={dragon.id} data={dragon} handleDeleteDragon={handleDeleteDragon} handleToProfile={handleToProfile} />
                         ))}
                     </ul>
-                    <Button className="addNewDragon" onClick={handleRegister}>
-                        Cadastrar novo dragão
-                    </Button>
                 </section>
             </div>
         </div>
