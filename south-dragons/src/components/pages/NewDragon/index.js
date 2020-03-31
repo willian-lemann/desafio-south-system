@@ -21,7 +21,6 @@ function NewDragon() {
         onClose: () => history.push('/list')
     });
 
-
     const handleNewDragon = async (event) => {
         event.preventDefault();
 
@@ -34,7 +33,6 @@ function NewDragon() {
         if (response.data !== null) {
             notify();
         }
-
     };
 
     return (
@@ -53,21 +51,20 @@ function NewDragon() {
                     </Link>
                 </section>
 
-                <form >
+                <form onSubmit={handleNewDragon}>
                     <input
+                        required
                         placeholder="Nome do dragão"
                         value={dragonName}
                         onChange={event => setDragonName(event.target.value)}
                     />
                     <input
+                        required
                         placeholder="Tipo do dragão"
                         value={dragonType}
                         onChange={event => setDragonType(event.target.value)}
                     />
-                    <Button onClick={handleNewDragon}>Cadastrar</Button>
-
-
-
+                    <Button>Cadastrar</Button>
                 </form>
             </div>
         </div>

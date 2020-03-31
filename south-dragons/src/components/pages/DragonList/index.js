@@ -40,8 +40,7 @@ function DragonList() {
         history.push(`/profile/${id}`)
     };
 
-
-    let orderedDragons = orderBy(dragons, [dragon => dragon.name.toLowerCase()], ['asc']);
+    let orderedDragonsList = orderBy(dragons, [dragon => dragon.name.toLowerCase()], ['asc']);
 
     return (
         <div className="dragonlist-container">
@@ -55,7 +54,7 @@ function DragonList() {
                 </Button>
                 <section className="dragonlist-content">
                     <ul>
-                        {orderedDragons.map(dragon => (
+                        {orderedDragonsList.map(dragon => (
                             <DragonItems key={dragon.id} data={dragon} handleDeleteDragon={handleDeleteDragon} handleToProfile={handleToProfile} />
                         ))}
                     </ul>

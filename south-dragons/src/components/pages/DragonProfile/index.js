@@ -36,7 +36,7 @@ function DragonProfile() {
 
                 <strong>Data de criação:</strong>
                 <p>{!isEmpty(dragon) &&
-                    format(parseISO(dragon.createdAt), "dd-mm-yyyy")}
+                    format(parseISO(dragon.createdAt), `dd-MM-yyyy hh:mm:ss`)}
                 </p>
             </section>
             <Link to="/list">

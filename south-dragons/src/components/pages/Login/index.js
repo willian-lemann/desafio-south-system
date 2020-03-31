@@ -6,10 +6,8 @@ import './styles.css';
 import dragonLogo from '../../../assets/dragon-logo.jpg';
 
 import ValidateUser from '../../../services/LoginService/ValidateUser';
- 
-
-function Login() {
-
+  
+function Login() { 
     const history = useHistory();
 
     const [user, setUser] = useState('');
@@ -24,7 +22,7 @@ function Login() {
         })
 
         if (isUserValid) {
-            localStorage.setItem('user', user);
+            
             history.push('list');
         }
         else {
